@@ -11,3 +11,12 @@ const registrationValidation = {
 }
 
 export const verifyRegistration = validate(registrationValidation,{},{})
+
+const loginValidation = {
+    body: Joi.object({
+        email: Joi.string().email().required(),
+        password: Joi.string().required().min(6).max(24),
+    })
+}
+
+export const verifyLogin = validate(loginValidation,{},{})

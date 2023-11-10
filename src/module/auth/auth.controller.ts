@@ -33,3 +33,48 @@ export const createRegister = async (req: Request, res: Response, next: NextFunc
         next(err)
     }
 }
+
+
+export const loginUser = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { email, password } = req.body;
+
+        const isUserExist = await User.findOne({ email })
+        if (!isUserExist) {
+            throw new Error('User not found')
+        }
+        const isPasswordCorrect = await bcrypt.compare(password, isUserExist.password);
+        if (!isPasswordCorrect) {
+            throw new Error("Password is incorrect")
+        }
+
+        const user = {
+            _id: isUserExist._id,
+            name: isUserExist.name,
+            email: isUserExist.email,
+            address: isUserExist.address,
+            phoneNumber: isUserExist.phoneNumber,
+        }
+
+
+        const accessToken = createToken(user, "ACCESS");
+
+        const refreshToken = createToken(user, "REFRESH");
+
+        res.cookie("refreshToken", refreshToken, {
+            httpOnly: true,
+            path: "/",
+        });
+
+        res.status(200).send({
+            status: true,
+            statusCode: 200,
+            message: "User Login Success",
+            data: user,
+            accessToken
+        })
+    }
+    catch (err) {
+        next(err)
+    }
+}
