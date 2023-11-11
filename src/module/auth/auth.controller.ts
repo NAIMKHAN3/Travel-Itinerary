@@ -23,7 +23,7 @@ export const createRegister = async (req: Request, res: Response, next: NextFunc
             path: "/",
         });
         res.status(201).send({
-            status: true,
+            success: true,
             message: "Register Success Done",
             data: user,
             accessToken
@@ -67,7 +67,7 @@ export const loginUser = async (req: Request, res: Response, next: NextFunction)
         });
 
         res.status(200).send({
-            status: true,
+            success: true,
             statusCode: 200,
             message: "User Login Success",
             data: user,
