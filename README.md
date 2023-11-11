@@ -1,4 +1,6 @@
-# Live Link : https://travel-itinerary-alpha.vercel.app
+# Live Link : <a href="https://travel-itinerary-alpha.vercel.app">https://travel-itinerary-alpha.vercel.app</a>
+
+# Postman data check: <a href="https://drive.google.com/file/d/13tay8Z9XTr4Uf3ixWz5R9NQWZ68d4Mz6/view?usp=sharing">https://drive.google.com/file/d/13tay8Z9XTr4Uf3ixWz5R9NQWZ68d4Mz6/view?usp=sharing</a>
 
 - Token format Bearer
   example (Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c)
