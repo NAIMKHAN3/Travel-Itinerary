@@ -12,3 +12,17 @@ const itineraryValidation = {
 }
 
 export const verifyItinerary = validate(itineraryValidation,{},{})
+
+
+const updateItineraryValidation = {
+    body: Joi.object({
+        name: Joi.string().optional(),
+        city: Joi.string().optional(),
+        country: Joi.string().optional(),
+        startDate: Joi.date().optional(),
+        endDate: Joi.date().optional(),
+        activities: Joi.array().optional(),
+    })
+}
+
+export const verifyUpdateItinerary = validate(updateItineraryValidation,{},{})

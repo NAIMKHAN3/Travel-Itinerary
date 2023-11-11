@@ -15,6 +15,19 @@ export const createTransportation = async (req: Request, res: Response, next: Ne
         next(err)
     }
 }
+export const updateTransportation = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const result = await Tranportations.findByIdAndUpdate(req.params.id, req.body);
+        res.status(200).send({
+            success: true,
+            message: "Transportation update done",
+            data: result
+        })
+    }
+    catch (err) {
+        next(err)
+    }
+}
 export const getTransportationsByUser = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const result = await Tranportations.find({user: req.user._id})
