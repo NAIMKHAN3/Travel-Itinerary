@@ -8,7 +8,7 @@
 
 - Auth (user) Route
 
-- register example <br/>
+- register example data <br/>
   {<br/>
   "name":"ali hasan", <br/>
   "email":"alihasan@gmai.com", <br/>
@@ -22,7 +22,7 @@
 
 - Itinerary Route
 
-- example date create <br/>
+- example data create <br/>
   { <br/>
   "name": "Ali Hasan", <br/>
   "city": "Dhaka", <br/>
@@ -39,7 +39,7 @@
 - delete-itinerary-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/delete-itinerary/:id (delete)
 
 - Transportations Route
-- example date create <br/>
+- example data create <br/>
   { <br/>
   "itinerary": "6ff9e00a853aa6757d9d8173", <br/>
   "mode": "bus", <br/>
@@ -57,13 +57,14 @@
 - delete-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/transportations/delete-transportations/:id (delete)
 
 - Accommodation Route
-{
-  "transportations": "6ff9e00a853aa6757d9d8173",
-  "resortName": "Aventure Resort",
-  "resortAddress": "Dhaka",
-  "checkInTime": "2023-01-20T00:00:00.000Z",
-  "checkOutTime": "2023-01-20T00:00:00.000Z"
-  }
+- example data create <br/>
+{<br/>
+  "transportations": "6ff9e00a853aa6757d9d8173", <br/>
+  "resortName": "Aventure Resort", <br/>
+  "resortAddress": "Dhaka", <br/>
+  "checkInTime": "2023-01-20T00:00:00.000Z", <br/>
+  "checkOutTime": "2023-01-20T00:00:00.000Z" <br/>
+  }<br/>
 
 - create-accommodation-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/create-accommodation (post)
 - get-accommondation-by-user-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/get-accommodations-by-user (get)
