@@ -8,14 +8,14 @@ Auth (user) Route
 - register example
   {
   "name":" ali hasan",
-  "email":" alihasan@gmai.com",
+  "email":"alihasan@gmai.com",
   "password": "ali hasan",
   "address": "dhaka",
   "phoneNumber": "0185478544"
   }
 
-- https://travel-itinerary-alpha.vercel.app/api/v1/auth/register (post)
-- https://travel-itinerary-alpha.vercel.app/api/v1/auth/login (post)
+- register-route =  https://travel-itinerary-alpha.vercel.app/api/v1/auth/register (post)
+- login-route = https://travel-itinerary-alpha.vercel.app/api/v1/auth/login (post)
 
 Itinerary Route
 
@@ -29,11 +29,11 @@ Itinerary Route
   "activities": ["Dhaka Tour"]
   }
 
-- https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/create-itinerary (post)
-- https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/update-itinerary/:id (put)
-- https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/get-itinerarys (get)
-- https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/get-itinerary-by-id/:id (get)
-- https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/delete-itinerary/:id (delete)
+- crete-itinerary-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/create-itinerary (post)
+- update-itinerary-route https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/update-itinerary/:id (put)
+- get-itinerary-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/get-itinerarys (get)
+- get-itinerary -by-id-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/get-itinerary-by-id/:id (get)
+- delete-itinerary-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/delete-itinerary/:id (delete)
 
 Transportations Route
 - example date create
@@ -47,11 +47,11 @@ Transportations Route
   "arrivalTime": "2023-01-20T00:00:00.000Z"
   }
 
-- https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/create-transportations (get)
-- https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/update-transportations/:id (put)
-- https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/get-transportations-by-user (get)
-- https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/get-transportations-by-id/:id (get)
-- https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/delete-transportations/:id (delete)
+- create-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/create-transportations (get)
+- update-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/update-transportations/:id (put)
+- get-transportations-by-user-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/get-transportations-by-user (get)
+- get-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/get-transportations-by-id/:id (get)
+- delete-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/delete-transportations/:id (delete)
 
 Accommodation Route
 {
@@ -62,11 +62,11 @@ Accommodation Route
   "checkOutTime": "2023-01-20T00:00:00.000Z"
   }
 
-- https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/create-accommodation (post)
-- https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/get-accommodations-by-user (get)
-- https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/get-accommodation-by-id/:id (get)
-- https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/update-accommodation/:id (put)
-- https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/delete-accommodation/:id (delete)
+- create-accommodation-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/create-accommodation (post)
+- get-transportations-by-user-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/get-accommodations-by-user (get)
+- get-transportations-by-id-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/get-accommodation-by-id/:id (get)
+- update-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/update-accommodation/:id (put)
+- delete-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/delete-accommodation/:id (delete)
 
 Technology Uses
 

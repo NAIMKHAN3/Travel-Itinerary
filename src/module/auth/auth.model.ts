@@ -25,7 +25,6 @@ const userSchema = new Schema<IUser>({
     },
     itinerary: {
         type: Schema.Types.ObjectId,
-        default: [],
         ref: 'Itinerary'
     }
 }, {timestamps: true})
