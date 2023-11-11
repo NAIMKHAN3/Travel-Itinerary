@@ -1,10 +1,18 @@
 import { NextFunction, Request, Response } from "express";
 import { Tranportations } from "./transportations.model";
+import { Itinerary } from "../itinerary/itinerary.model";
+import mongoose from "mongoose";
+import { Accommodation } from "../accommodation/accommodation.model";
 
 export const createTransportation = async (req: Request, res: Response, next: NextFunction) => {
     try {
         req.body.user = req.user._id
         const result = await Tranportations.create(req.body)
+        const findItinerary = await Itinerary.findById(req.body.itinerary)
+        if (findItinerary) {
+            findItinerary.tranportations = new mongoose.Types.ObjectId(result._id);
+            await findItinerary.save();
+        }
         res.status(201).send({
             success: true,
             message: "Transportation create done",
@@ -57,6 +65,7 @@ export const getTransportationsById = async (req: Request, res: Response, next: 
 export const deleteTransportations = async (req: Request, res: Response, next: NextFunction) => {
     try {
         const result = await Tranportations.findByIdAndDelete(req.params.id)
+        const deleteAccommodation = await Accommodation.findByIdAndDelete(result?.accommodation)
         res.status(200).send({
             success: true,
             message: "Transportation delete done",

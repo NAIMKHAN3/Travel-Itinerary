@@ -23,6 +23,11 @@ const userSchema = new Schema<IUser>({
         type: String,
         required: true
     },
+    itinerary: {
+        type: Schema.Types.ObjectId,
+        default: [],
+        ref: 'Itinerary'
+    }
 }, {timestamps: true})
 
 export const User = model<IUser>('User', userSchema);

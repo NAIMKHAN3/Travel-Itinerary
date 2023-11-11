@@ -32,6 +32,10 @@ const itinerarySchema = new Schema<IItinerary>({
         type: Date,
         required: true
     },
+    tranportations:{
+        type: Schema.Types.ObjectId,
+        ref: 'Transportations'
+    }
 },{timestamps: true})
 
 

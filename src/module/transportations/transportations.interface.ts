@@ -10,6 +10,7 @@ export interface ITransportations {
     arrivalCity: string;
     depertureTime: Date;
     arrivalTime: Date;
+    accommodation?: Types.ObjectId;
     createdAt?: string;
     updatedAt?: string;
 }

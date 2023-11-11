@@ -13,6 +13,7 @@ export interface IItinerary {
     startDate: Date;
     endDate:Date;
     activities: string[];
+    tranportations?: Types.ObjectId;
     createdAt?: string;
     updatedAt?: string;
 }

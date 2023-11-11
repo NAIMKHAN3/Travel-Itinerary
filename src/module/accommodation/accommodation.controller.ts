@@ -1,10 +1,17 @@
 import { NextFunction, Request, Response } from "express"
 import { Accommodation } from "./accommodation.model"
+import { Tranportations } from "../transportations/transportations.model"
+import mongoose from "mongoose"
 
 export const createAccommodation = async (req: Request, res: Response, next: NextFunction) => {
     try {
         req.body.user = req.user._id
         const result = await Accommodation.create(req.body)
+        const findTransportaions = await Tranportations.findById(req.body.transportations)
+        if (findTransportaions) {
+            findTransportaions.accommodation = new mongoose.Types.ObjectId(result._id);
+            await findTransportaions.save();
+        }
         res.status(201).send({
             success: true,
             message: "Accommodation create done",

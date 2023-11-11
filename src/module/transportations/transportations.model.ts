@@ -36,6 +36,10 @@ const tranportatonsSchema = new Schema<ITransportations>({
         type: Date,
         required: true
     },
+    accommodation: {
+        type: Schema.Types.ObjectId,
+        ref: 'Accommodation'
+    }
 }, { timestamps: true })
 
 export const Tranportations = model<ITransportations>('Transportations', tranportatonsSchema)

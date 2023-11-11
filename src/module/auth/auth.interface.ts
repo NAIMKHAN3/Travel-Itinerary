@@ -1,3 +1,5 @@
+import { Types } from "mongoose";
+
 export interface IUser{
     _id?:string;
     phoneNumber: string;
@@ -5,6 +7,7 @@ export interface IUser{
     name: string;
     email: string;
     address: string;
+    itinerary?: [Types.ObjectId];
     createdAt?: string;
     updatedAt?: string;
 }
