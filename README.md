@@ -7,7 +7,7 @@ Auth (user) Route
 
 - register example
   {
-  "name":" ali hasan",
+  "name":"ali hasan",
   "email":"alihasan@gmai.com",
   "password": "ali hasan",
   "address": "dhaka",
@@ -24,7 +24,7 @@ Itinerary Route
   "name": "Ali Hasan",
   "city": "Dhaka",
   "country": "Dhaka",
-  "startDate": "2023-01-20T00:00:00.000Z"",
+  "startDate": "2023-01-20T00:00:00.000Z",
   "endDate": "2023-01-20T00:00:00.000Z",
   "activities": ["Dhaka Tour"]
   }
@@ -32,7 +32,7 @@ Itinerary Route
 - crete-itinerary-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/create-itinerary (post)
 - update-itinerary-route https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/update-itinerary/:id (put)
 - get-itinerary-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/get-itinerarys (get)
-- get-itinerary -by-id-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/get-itinerary-by-id/:id (get)
+- get-itinerary-by-id-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/get-itinerary-by-id/:id (get)
 - delete-itinerary-route = https://travel-itinerary-alpha.vercel.app/api/v1/itinerary/delete-itinerary/:id (delete)
 
 Transportations Route
@@ -43,22 +43,22 @@ Transportations Route
   "operator": "Hanif Express",
   "depertureCity": "Dhaka",
   "arrivalCity": "khulna",
-  "depertureTime": "2023-01-20T00:00:00.000Z"",
+  "depertureTime": "2023-01-20T00:00:00.000Z",
   "arrivalTime": "2023-01-20T00:00:00.000Z"
   }
 
-- create-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/create-transportations (get)
-- update-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/update-transportations/:id (put)
-- get-transportations-by-user-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/get-transportations-by-user (get)
-- get-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/get-transportations-by-id/:id (get)
-- delete-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/tranportations/delete-transportations/:id (delete)
+- create-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/transportations/create-transportations (post)
+- update-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/transportations/update-transportations/:id (put)
+- get-transportations-by-user-route = https://travel-itinerary-alpha.vercel.app/api/v1/transportations/get-transportations-by-user (get)
+- get-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/transportations/get-transportations-by-id/:id (get)
+- delete-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/transportations/delete-transportations/:id (delete)
 
 Accommodation Route
 {
   "transportations": "6ff9e00a853aa6757d9d8173",
   "resortName": "Aventure Resort",
   "resortAddress": "Dhaka",
-  "checkInTime": "2023-01-20T00:00:00.000Z"",
+  "checkInTime": "2023-01-20T00:00:00.000Z",
   "checkOutTime": "2023-01-20T00:00:00.000Z"
   }
 

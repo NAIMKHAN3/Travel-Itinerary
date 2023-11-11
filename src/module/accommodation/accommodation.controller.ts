@@ -24,7 +24,14 @@ export const createAccommodation = async (req: Request, res: Response, next: Nex
 }
 export const updateAccommodation = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const result = await Accommodation.findByIdAndUpdate(req.params.id, req.body)
+        const result = await Accommodation.findByIdAndUpdate(req.params.id, req.body,{new:true})
+        if(!result){
+          return  res.status(400).send({
+                success: false,
+                message: "Accommodation not found",
+                data: result
+            })
+        }
         res.status(200).send({
             success: true,
             message: "Accommodation update done",

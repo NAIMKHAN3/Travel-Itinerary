@@ -7,7 +7,7 @@ const accommodationSchema = new Schema<IAccommodation>({
         required: true,
         ref: 'User'
     },
-    transportation: {
+    transportations: {
         type: Schema.ObjectId,
         required: true,
         ref: 'Transportations'

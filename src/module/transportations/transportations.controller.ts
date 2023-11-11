@@ -25,7 +25,13 @@ export const createTransportation = async (req: Request, res: Response, next: Ne
 }
 export const updateTransportation = async (req: Request, res: Response, next: NextFunction) => {
     try {
-        const result = await Tranportations.findByIdAndUpdate(req.params.id, req.body);
+        const result = await Tranportations.findByIdAndUpdate(req.params.id, req.body,{new:true});
+        if(!result){
+            return res.status(400).send({
+                success: false,
+                message: "Transportation not found"
+            })
+        }
         res.status(200).send({
             success: true,
             message: "Transportation update done",

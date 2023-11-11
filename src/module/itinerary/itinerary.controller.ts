@@ -41,11 +41,18 @@ export const UpdateItinerary = async (req: Request, res: Response, next: NextFun
     try {
         const { name, city, country, startDate, endDate, activities } = req.body;
         const id = req.params.id;
+        const findItinerary = await Itinerary.findById(id)
+        if(!findItinerary){
+            return res.status(400).send({
+                success: false,
+                message: "Itinerary not found"
+            })
+        }
         const itenerary = {
             name,
             destination: {
-                city,
-                country
+                city: city ? city : findItinerary?.destination.city,
+                country: country? country : findItinerary?.destination.country
             },
             activities,
             startDate,
