@@ -28,6 +28,31 @@ export const createItinerary = async (req: Request, res: Response, next: NextFun
         next(err)
     }
 }
+export const UpdateItinerary = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { name, city, country, startDate, endDate, activities } = req.body;
+        const id = req.params.id;
+        const itenerary = {
+            name,
+            destination: {
+                city,
+                country
+            },
+            activities,
+            startDate,
+            endDate
+        }
+        const result = await Itinerary.findByIdAndUpdate(id, itenerary,{new:true})
+        res.status(200).send({
+            success: true,
+            message: "Itinerary update done",
+            data: result
+        })
+    }
+    catch (err) {
+        next(err)
+    }
+}
 
 export const getItinerarys = async (req: Request, res: Response, next: NextFunction) => {
     try {
