@@ -2,6 +2,11 @@ import { Schema, model } from "mongoose";
 import { ITransportations } from "./transportations.interface";
 
 const tranportatonsSchema = new Schema<ITransportations>({
+    user: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
+    },
     itinerary: {
         type: Schema.Types.ObjectId,
         required: true,
