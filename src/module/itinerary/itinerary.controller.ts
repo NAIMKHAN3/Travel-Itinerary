@@ -60,3 +60,18 @@ export const getItineraryById = async (req: Request, res: Response, next: NextFu
         next(err)
     }
 }
+export const deleteItinerary = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const id = req.params.id;
+       
+        const result = await Itinerary.findByIdAndDelete(id)
+        res.status(200).send({
+            success: true,
+            message: "Itinerary delete done",
+            data: result
+        })
+    }
+    catch (err) {
+        next(err)
+    }
+}
