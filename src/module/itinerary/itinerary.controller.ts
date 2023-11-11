@@ -28,3 +28,35 @@ export const createItinerary = async (req: Request, res: Response, next: NextFun
         next(err)
     }
 }
+
+export const getItinerarys = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const { _id } = req.user;
+       
+        const result = await Itinerary.find({user:_id})
+        res.status(200).send({
+            success: true,
+            message: "Itinerary get done",
+            data: result
+        })
+    }
+    catch (err) {
+        next(err)
+    }
+}
+
+export const getItineraryById = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const id = req.params.id;
+       
+        const result = await Itinerary.findById(id)
+        res.status(200).send({
+            success: true,
+            message: "Itinerary get done",
+            data: result
+        })
+    }
+    catch (err) {
+        next(err)
+    }
+}
