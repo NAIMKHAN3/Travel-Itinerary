@@ -3,6 +3,8 @@
 - Token format Bearer
   example (Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c)
 
+* All route access only authenticate user without register and login.
+* All route include bearer token (must)
 Auth (user) Route
 
 - register example
@@ -63,10 +65,10 @@ Accommodation Route
   }
 
 - create-accommodation-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/create-accommodation (post)
-- get-transportations-by-user-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/get-accommodations-by-user (get)
-- get-transportations-by-id-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/get-accommodation-by-id/:id (get)
-- update-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/update-accommodation/:id (put)
-- delete-transportations-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/delete-accommodation/:id (delete)
+- get-accommondation-by-user-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/get-accommodations-by-user (get)
+- get-accommondation-by-id-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/get-accommodation-by-id/:id (get)
+- update-accommondation-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/update-accommodation/:id (put)
+- delete-accommondation-route = https://travel-itinerary-alpha.vercel.app/api/v1/accommodation/delete-accommodation/:id (delete)
 
 Technology Uses
 

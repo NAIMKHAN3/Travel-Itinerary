@@ -10,6 +10,6 @@ router.post('/create-accommodation', verifyJwt, verifyAccommodation, createAccom
 router.put('/update-accommodation/:id', verifyParams, verifyJwt, verifyUpdateAccommodation, updateAccommodation)
 router.get('/get-accommodations-by-user', verifyJwt,  getAccommodationsByUser)
 router.get('/get-accommodation-by-id/:id',verifyParams, verifyJwt,  getAccommodationsById)
-router.get('/delete-accommodation/:id',verifyParams, verifyJwt,  deleteAccommodation)
+router.delete('/delete-accommodation/:id',verifyParams, verifyJwt,  deleteAccommodation)
 
 export default router;
