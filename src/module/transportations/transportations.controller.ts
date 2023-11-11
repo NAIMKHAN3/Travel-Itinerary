@@ -28,3 +28,29 @@ export const getTransportationsByUser = async (req: Request, res: Response, next
         next(err)
     }
 }
+export const getTransportationsById = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const result = await Tranportations.findById(req.params.id)
+        res.status(200).send({
+            success: true,
+            message: "Transportation get done",
+            data: result
+        })
+    }
+    catch (err) {
+        next(err)
+    }
+}
+export const deleteTransportations = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+        const result = await Tranportations.findByIdAndDelete(req.params.id)
+        res.status(200).send({
+            success: true,
+            message: "Transportation delete done",
+            data: result
+        })
+    }
+    catch (err) {
+        next(err)
+    }
+}

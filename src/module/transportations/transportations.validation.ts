@@ -13,3 +13,17 @@ const transportationValidation = {
 }
 
 export const verifyTransportations = validate(transportationValidation,{},{})
+
+const updateTransportationValidation = {
+    body: Joi.object({
+        itinerary: Joi.string().optional(),
+        mode: Joi.string().optional(),
+        operator: Joi.string().optional(),
+        depertureCity: Joi.string().optional(),
+        arrivalCity: Joi.string().optional(),
+        depertureTime: Joi.date().optional(),
+        arrivalTime: Joi.date().optional(),
+    })
+}
+
+export const verifyUpdateTransportations = validate(updateTransportationValidation,{},{})
